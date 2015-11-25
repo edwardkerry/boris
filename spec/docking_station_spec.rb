@@ -37,6 +37,4 @@ describe DockingStation do
 		expect(subject.bike).to eq bike
 	end
 
-
-
 end
