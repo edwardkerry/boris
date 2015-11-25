@@ -22,10 +22,16 @@ describe DockingStation do
 		expect(subject).to respond_to(:dock_bike).with(1).argument
 	end
 
-	it "should allow a bike to dock" do
-		bike = Bike.new
-		expect(subject.dock_bike(bike)).to eq bike
-	end
+  describe '#dock_bike' do
+    it "should allow a bike to dock" do
+	    bike = Bike.new
+	    expect(subject.dock_bike(bike)).to eq bike
+	  end
+		it "should raise an error if the station is full" do
+		  subject.dock_bike(Bike.new)
+			expect {subject.dock_bike(Bike.new)}.to raise_error("This station is full")
+		end
+  end
 
 	it "should respond to method bike" do
 		expect(subject).to respond_to :bike
