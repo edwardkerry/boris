@@ -1,8 +1,8 @@
 require 'bike'
 
 describe Bike do
-	it 'should respond to method working?' do
-		expect(subject).to respond_to :working?
+	it 'should respond to method broken?' do
+		expect(subject).to respond_to :broken?
 	end
 
 	it 'can be reported broken' do

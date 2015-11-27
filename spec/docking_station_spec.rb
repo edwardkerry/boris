@@ -4,10 +4,6 @@ require 'docking_station'
 
 describe DockingStation do
 
-	it 'should report to method bike' do
-		expect(subject).to respond_to :bike_dock
-	end
-
   describe 'initialize' do
 		it 'has a default capacity' do
 			expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
